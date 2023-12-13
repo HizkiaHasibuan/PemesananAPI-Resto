@@ -72,7 +72,7 @@ class CartController extends Controller
                     'error' => 'Data tidak ditemukan.'
                 ], 404);
             }
-            $cartItem->delete();
+            Cart::destroy($id);
             return response([
                 'status' => true,
                 'message' => 'Cart item successfully deleted'
